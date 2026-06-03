@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+  int n=10;
+  int arr[] = {5,3,7,14,18,1,4,8,3};
+  int k=15;
+  int sum=0;
+  int start=0;
+  for(int end=0;end<n;end++){
+    sum=sum+arr[end];
+    while(sum>k&&start<=end){
+      sum=sum-arr[start];
+      start++;
+    }
+    if(k==sum){
+      printf("%d%d", start+1,end+1);
+      break;
+    }
+  }
+  return 0;
+}
+
+
+
+
+
+
